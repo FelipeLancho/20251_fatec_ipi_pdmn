@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Busca from './components/Busca';
+import Exibicao from './components/Exibicao';
+import 'primeflex/primeflex.css';
 
 const App = () => {
     const [resultado, setResultado] = useState([]);
@@ -13,6 +15,7 @@ const App = () => {
                         onResultadoRecebido={setResultado}
                         onOpcaoAlterada={setOpcao}
                     />
+                    <Exibicao previsoes={resultado} opcao={opcao} />
                 </div>
             </div>
         </div>
